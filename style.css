@@ -21,7 +21,7 @@ header, footer {
 	line-height: 64px; /* By making the line-height as tall as the header, we vertically center the text */
 
 	color: #EEE;
-	font-family: "Lily Script One", cursive;
+	font-family: "Life Savers";
 	font-size: 2em;
 	text-align: center;
 	text-transform: uppercase;
@@ -137,9 +137,18 @@ nav ol li {
 	margin: 0;
 }
 
-.active-waypoint {
+
+
+.active-waypoint div {
 	background-color: #D12121;
+-webkit-transform: rotate(45deg);
+-webkit-transition: -webkit-transform 300ms ease;}
+
+.active-waypoint div:hover {
+	background-color:orange;
 }
+
+
 
 li div {
 	background-color: #EEE;
@@ -152,4 +161,8 @@ li div {
 
 	margin-right: auto;
 	margin-left: auto;	
+}
+
+li div:hover{
+	background-color:orange;
 }

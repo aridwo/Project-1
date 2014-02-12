@@ -16,6 +16,24 @@ for (i = 0; i < waypoints.length; i++) {
 	waypoints[i].addEventListener("click", waypointClickHandler, false);
 }
 
+var waypointPositionNumber = [];
+
+for (i = 0; i < waypoints.length; i++) {
+
+waypointPositionNumber.push(waypoints[i].getElementsByTagName('p')[0]);
+
+console.log(waypointPositionNumber[i]);
+
+waypoints[i].onmouseover = function() {
+
+console.log("moused over waypoint");
+
+waypointPositionNumber[i].classList.add('fadeInText');
+
+}}
+
+
+
 function updateWaypoints() {
 	fractionScrolled = scrolled / scrollTotal;
 
@@ -35,12 +53,12 @@ function updateWaypoints() {
 		}
 	}
 
-	// Seek to the proportional time of the 38s clip of Bey's "Countdown"
-	document.getElementById('Countdown').currentTime = fractionScrolled * 38.0;
+	// Seek to the proportional time of the 22s clip of Lucy the dog jumping for joy
+	document.getElementById('Lucy').currentTime = fractionScrolled * 22.0;
 }
 
 function waypointClickHandler(e) {
-	console.log('cilck');
+	console.log('e');
 	for (i = 0; i < waypoints.length; i++) {
 		if (waypoints[i] === this) {
 			scrolled = (i+1)*100;
@@ -61,3 +79,15 @@ function MouseWheelHandler(e) {
 	
 	updateWaypoints();
 }
+
+//applying click to next-triangle 
+var next = document.getElementById('next-triangle');
+
+next.onclick = function() {
+scrolled = (scrolled % 1000) + 100;
+console.log("scrolled = " + scrolled);
+updateWaypoints();
+console.log(scrolled);
+    
+    
+};
