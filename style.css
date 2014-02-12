@@ -141,11 +141,16 @@ nav ol li {
 
 .active-waypoint div {
 	background-color: #D12121;
--webkit-transform: rotate(45deg);
--webkit-transition: -webkit-transform 300ms ease;}
+transition:width 2s, height 2s, transform 2s;
+-webkit-transition:width 2s, height 2s, -webkit-transform 2s; /* Safari */
+}
 
 .active-waypoint div:hover {
 	background-color:orange;
+	width:30px;
+height:30px;
+transform:rotate(45deg);
+-webkit-transform:rotate(45deg); /* Safari */
 }
 
 

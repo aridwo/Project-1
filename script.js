@@ -16,21 +16,7 @@ for (i = 0; i < waypoints.length; i++) {
 	waypoints[i].addEventListener("click", waypointClickHandler, false);
 }
 
-var waypointPositionNumber = [];
 
-for (i = 0; i < waypoints.length; i++) {
-
-waypointPositionNumber.push(waypoints[i].getElementsByTagName('p')[0]);
-
-console.log(waypointPositionNumber[i]);
-
-waypoints[i].onmouseover = function() {
-
-console.log("moused over waypoint");
-
-waypointPositionNumber[i].classList.add('fadeInText');
-
-}}
 
 
 
