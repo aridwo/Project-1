@@ -64,6 +64,7 @@ function MouseWheelHandler(e) {
 }
 
 //applying click to next-triangle 
+//Implements down function when next-triangle is clicked
 var next = document.getElementById('next-triangle');
 next.onclick = function() {
 scrolled = (scrolled % 800) + 100;
