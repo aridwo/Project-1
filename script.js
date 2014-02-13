@@ -16,9 +16,6 @@ for (i = 0; i < waypoints.length; i++) {
 	waypoints[i].addEventListener("click", waypointClickHandler, false);
 }
 
-
-//
-
 function updateWaypoints() {
 	fractionScrolled = scrolled / scrollTotal;
 
@@ -63,7 +60,6 @@ function MouseWheelHandler(e) {
 	updateWaypoints();
 }
 
-//applying click to next-triangle 
 //Implements down function when next-triangle is clicked
 var next = document.getElementById('next-triangle');
 next.onclick = function() {
