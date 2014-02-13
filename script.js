@@ -1,4 +1,5 @@
 var scrollTotal = 1000;
+var scrollTotal = 800;
 var scrolled = 0; // A variable to keep track of how far we've scrolled.
 var fractionScrolled = scrolled / scrollTotal;
 
@@ -25,8 +26,10 @@ function updateWaypoints() {
 
 	// 0 <= fractionScrolled <= 1, so *10 gives us 10; Math.floor rounds down
 	var whichWaypoint = Math.max(0, Math.floor(fractionScrolled * 10) - 1);
+	var whichWaypoint = Math.max(0, Math.floor(fractionScrolled * 8) - 1);
 
 	for (i = 0; i < 10; i++) {
+	for (i = 0; i < 8; i++) {
 		// Notice we constructed our li#id names to make this easy
 		var currentWaypoint = document.getElementById('waypoint-' + i);
 		
@@ -72,6 +75,7 @@ var next = document.getElementById('next-triangle');
 next.onclick = function() {
 scrolled = (scrolled % 1000) + 100;
 console.log("scrolled = " + scrolled);
+scrolled = (scrolled % 800) + 100;
 updateWaypoints();
 console.log(scrolled);
     
